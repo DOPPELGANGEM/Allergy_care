@@ -1,0 +1,293 @@
+@charset "utf-8";
+
+/* common */
+.sec_inner { max-width:1440px; margin:0 auto;}
+.product_info { background-color:#f7f7f7; padding:46px 0 60px;}
+.product_info .product_info_wrap { position:relative;}
+.product_info .title_area { padding:0 0 30px; text-align: center;}
+.product_info .title_area h2 { font-size:40px; font-weight:700; margin-bottom: 10px;}
+.product_info .title_area p { font-size:16px; font-family:"SamsungOneKorean",arial, sans-serif; }
+.product_info .product_info_frame_wrap { position:relative; width:660px; border-radius:25px; overflow:hidden; cursor: pointer;}
+.product_info .product_info_frame_imgbox a { display:block;}
+.product_info_text_area { color:#fff; position:absolute; top:480px; left:40px; opacity:1; transform: translate3d(0,0,0); transition: all 0.45s ease-out;}
+.product_info_text_area h2 { font-size:50px; font-weight:700;}
+.product_info_text_area p { font-size:20px; font-weight:600;}
+.product_info .product_info_hover_wrap { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); transform:translate(0,100%); transition:all 0.35s;}
+.product_info .hover_content { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:100%; text-align: center;} 
+.product_info .hover_content .hover_img { margin-bottom:36px;}
+.product_info .hover_content .hover_img > img { margin:0 auto;}
+.product_info .hover_content .hover_txt h3 { font-size:30px; color:#fff; margin-bottom:36px;}
+.product_info .hover_content .hover_txt p { font-size:20px; color:#fff; font-family:"SamsungOneKorean",arial, sans-serif;}
+.product_info .product_info_frame_wrap:hover .product_info_text_area { opacity:0; transform: translate3d(0,30px,0);}
+.product_info .product_info_frame_wrap:hover .product_info_hover_wrap { opacity:1; transform:translate(0,0);}
+.product_info .product_info_pricelist_box { box-sizing: border-box; padding:26px 0 0 26px; position: relative; background:#fff; border-radius:25px;}
+.product_info .product_info_slide_head_area { position:relative; padding-bottom:38px;}
+.product_info .product_info_slide_head_area h3 { font-size:16px; font-family:"SamsungOneKorean",arial, sans-serif; line-height: 1.4; letter-spacing: -0.4px;}
+.product_info .product_info_odd .product_info_pricelist_box:nth-child(2n-1) .product_info_slide_head_area h3:after {content:''; display:block; width:81px; height:20px; position:absolute; top:28px; background:url(../img/product_info_best_seller_txt_pc.png) no-repeat; background-size:cover;}
+.product_info .product_info_even .product_info_pricelist_box:nth-child(2n) .product_info_slide_head_area h3:after {content:''; display:block; width:81px; height:20px; position:absolute; top:48px; background:url(../img/product_info_best_seller_txt_pc.png) no-repeat; background-size:cover;}
+.product_info .product_info_img_area img { margin:0 auto;}
+.product_info .product_info_price_area { text-align: center; margin:40px 0;}
+.product_info .product_info_price_area h4 { font-size:24px;}
+.product_info .product_info_price_area .price_discount { display:flex; justify-content: center; align-items: center; padding: 2px 0 10px;}
+.product_info .product_info_price_area .price_discount del { font-size:14px; margin-right:14px;}
+.product_info .product_info_price_area .price_discount h5 { font-size:16px; color:#0a72eb;}
+.product_info .product_info_price_area .star_area { display:flex; justify-content: center; align-items: center;}
+.product_info .product_info_price_area .star_area li { margin-right:8px;}
+.product_info .product_info_price_area .star_area p { font-size:13px;}
+.product_info .product_info_pricelist_box .product_info_gift_area { padding-left:47px;}
+.product_info .product_info_pricelist_box .product_info_gift_area li { font-size:14px; font-weight:600;}
+.product_info .product_info_pricelist_box .product_info_gift_area li:before { content:''; display:inline-block; width:26px; height:26px; vertical-align: middle; margin-right:8px;}
+.product_info .product_info_pricelist_box .product_info_gift_area li:nth-child(1) { margin-bottom:8px;}
+.product_info .product_info_pricelist_box .product_info_gift_area li:nth-child(1):before { background:url(../img/product_info_yellowbox_01_pc.png) no-repeat; background-size:cover;}
+.product_info .product_info_pricelist_box .product_info_gift_area li:nth-child(2):before { background:url(../img/product_info_yellowbox_02_pc.png) no-repeat; background-size:cover;}
+.product_info .product_info_pricelist_box .product_info_button { padding:30px 0 0;  text-align: center;}
+.product_info .product_info_pricelist_box .product_info_button a { font-family:"SamsungOneKorean",arial, sans-serif; display:inline-block; background:#000; width:150px; height:40px; line-height:40px; border-radius:20px; font-weight:700; font-size:14px; color:#fff;}
+
+/* slick */
+.product_info_odd { display: flex;}
+.product_info_odd .product_info_slide_wrap { padding-left:37px;}
+.product_info_odd .product_info_pricelist { display:flex; width:720px;}
+.product_info_odd .product_info_pricelist_box { width:340px !important; height:600px; margin-right:20px;}
+.product_info_odd .product_info_slide_wrap .slick-prev { display:none !important;}
+.product_info_odd .product_info_slide_wrap .slick-next { position:absolute; top:50%; right:-24px; transform:translateY(-50%); font-size:0; width:17px; height:41px; background:url(../img/arrow-next_pc.png) no-repeat; background-size:cover;}
+.product_info_even { display:flex; flex-direction: row-reverse;}
+.product_info_even .product_info_slide_wrap { width:720px; position:relative; padding-right:16px;}
+.product_info_even .product_info_pricelist { display:flex; width:720px;}
+.product_info_even .product_info_pricelist_box { width:340px !important; height:600px; margin-left:20px;}
+.product_info_even .product_info_slide_wrap .slick-prev { position:absolute; top:50%; left:-30px; transform:translateY(-50%); font-size:0; width:18px; height:42px; background:url(../img/arrow-prev_pc.png) no-repeat; z-index:10; background-size:cover;}
+.product_info_even .product_info_slide_wrap .slick-next { display:none !important;}
+
+/* 메인 kv */
+.kv_visual_wrap { position:relative;}
+.kv_visual .kv_visual_text { position:absolute; top:42px; left:44px;}
+.kv_visual .kv_visual_text h1 { font-size:48px; font-weight:800; line-height:1.02; margin-bottom:20px;}
+.kv_visual .kv_visual_text p { font-size:16px; font-family:"SamsungOneKorean",arial, sans-serif; line-height:1.3;}
+.kv_visual_promotion { display:flex; padding:30px 0; align-items: center;}
+.kv_visual_promotion .kv_visual_left { width:405px; color:#000;  }
+.kv_visual_promotion .kv_visual_left h2 { font-size:40px; font-weight:800; line-height:1.2; margin-bottom:10px;}
+.kv_visual_promotion .kv_visual_left p { font-size:18px; font-weight:600; }
+.kv_visual_promotion .kv_visual_right { width:1035px; display:flex;}
+.kv_visual_promotion .kv_visual_right li { width:345px; display:flex; align-items: center;}
+.kv_visual_right_texts { margin:0 0 0 36px; color:#000; }
+.kv_visual_right_texts h3 { font-size:26px; font-weight:700; margin:0 0 12px;}
+.kv_visual_right_texts p { font-size:16px; font-family:"SamsungOneKorean",arial, sans-serif; letter-spacing: -0.4px;}
+
+/* Pet lovers with allergies? */
+#product_info_01 .product_info_pricelist_box:nth-child(2n-1) .product_info_slide_head_area { padding-bottom:64px;}
+#product_info_01 .product_info_text_area { top:442px;}
+#product_info_02 { padding:60px 0 90px;}
+#product_info_02 .product_info_slide_head_area { padding-bottom:50px;}
+
+/* Allergic to spring pollen? */
+#title_area_02.title_area { padding:0 0 40px;}
+#product_info_03 .product_info_slide_head_area { padding-bottom:64px;}
+#product_info_03 .product_info_pricelist_box:nth-child(2n-1) .product_info_slide_head_area { padding-bottom:46px;}
+#product_info_03 .product_info_pricelist_box:nth-child(2n-1) .product_info_slide_head_area h3:after {content:''; display:block; width:81px; height:20px; position:absolute; top:70px; background:url(../img/product_info_best_seller_txt_pc.png) no-repeat; background-size:cover;}
+#product_info_04 { padding:60px 0 50px;}
+#product_info_04 .product_info_slide_head_area { padding-bottom:52px;}
+
+/* disclaimer */
+.under_disclaimer span { font-family:"SamsungOneKorean",arial, sans-serif; font-size:14px; margin-right:6px;}
+.under_disclaimer li { display:flex; margin-bottom:14px;}
+.under_disclaimer li p { font-family:"SamsungOneKorean",arial, sans-serif; font-size:14px; letter-spacing: -0.2px; line-height: 1.2;}
+.under_disclaimer li:last-child { margin-bottom:0;}
+
+/* floating menu */
+.floating_btn { position:fixed; bottom:50px; right:50px; background:#000; opacity: 0;}
+.floating_btn a { display:block; width:54px; height:54px; text-align: center; font-size:0; background:url(../img/btn-gotop.png) no-repeat center;}
+body.scroll .floating_btn { opacity:1; transition:all 0.3s;}
+
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+
+  /* common */
+  .product_info {  padding:3.1944vw 0 4.1667vw;}
+  .product_info .title_area { padding:0 0 2.0833vw; }
+  .product_info .title_area h2 { font-size:2.7778vw;  margin-bottom: 0.6944vw;}
+  .product_info .title_area p { font-size:1.1111vw; }
+  .product_info .product_info_frame_wrap {  width:45.8333vw; border-radius:1.7361vw; }
+  .product_info .product_info_frame_wrap .product_info_frame_imgbox a img { width:45.8333vw;}
+  .product_info_text_area { top:33.3333vw; left:2.7778vw; }
+  .product_info_text_area h2 { font-size:3.4722vw; }
+  .product_info_text_area p { font-size:1.3889vw; }
+  .product_info .hover_content {  top:50%; left:50%; transform:translate(-50%,-50%); width:100%; } 
+  .product_info .hover_content .hover_img { margin-bottom:2.5000vw;}
+  .product_info .hover_content .hover_txt h3 { font-size:2.0833vw;  margin-bottom:2.5000vw;}
+  .product_info .hover_content .hover_txt p { font-size:1.3889vw; }
+  .product_info .product_info_pricelist_box {  padding:1.8056vw 0 0 1.8056vw; border-radius:1.7361vw;}
+  .product_info .product_info_slide_head_area {  padding-bottom:2.6389vw;}
+  .product_info .product_info_slide_head_area h3 { font-size:1.1111vw; line-height: 1.4; letter-spacing: -0.0278vw; white-space:nowrap; text-overflow: ellipsis; overflow:hidden;}
+  .product_info .product_info_odd .product_info_pricelist_box:nth-child(2n-1) .product_info_slide_head_area h3:after {content:''; width:5.6250vw; height:1.3889vw; top:1.9444vw;}
+  .product_info .product_info_even .product_info_pricelist_box:nth-child(2n) .product_info_slide_head_area h3:after {content:''; width:5.6250vw; height:1.3889vw; top:3.7333vw;}
+  .product_info .product_info_img_area img { margin:0 auto;}
+  .product_info .product_info_price_area {  margin:2.7778vw 0;}
+  .product_info .product_info_price_area h4 { font-size:1.6667vw;}
+  .product_info .product_info_price_area .price_discount {  padding: 0.1389vw 0 0.6944vw;}
+  .product_info .product_info_price_area .price_discount del { font-size:0.9722vw; margin-right:0.9722vw;}
+  .product_info .product_info_price_area .price_discount h5 { font-size:1.1111vw; }
+  .product_info .product_info_price_area .star_area li { margin-right:0.5556vw;}
+  .product_info .product_info_price_area .star_area li img { width:6.8750vw;}
+  .product_info .product_info_price_area .star_area p { font-size:0.9028vw;}
+  .product_info .product_info_pricelist_box .product_info_gift_area { padding-left:3.2639vw;}
+  .product_info .product_info_pricelist_box .product_info_gift_area li { font-size:0.9722vw; }
+  .product_info .product_info_pricelist_box .product_info_gift_area li:before {   width:1.8056vw; height:1.8056vw;  margin-right:0.5556vw;}
+  .product_info .product_info_pricelist_box .product_info_gift_area li:nth-child(1) { margin-bottom:0.5556vw; white-space:nowrap; text-overflow: ellipsis; overflow:hidden;}
+  .product_info .product_info_pricelist_box .product_info_button { padding:2.0833vw 0 0; }
+  .product_info .product_info_pricelist_box .product_info_button a { width:10.4167vw; height:2.7778vw; line-height:2.7778vw; border-radius:1.3889vw; font-size:0.9722vw; }
+
+  /* slick */
+  .product_info_odd { justify-content: center;}
+  .product_info_odd .product_info_slide_wrap { padding-left:2.5694vw;}
+  .product_info_odd .product_info_pricelist { width:50.0000vw;}
+  .product_info_odd .product_info_pricelist_box { width:23.6111vw !important; height:41.6667vw; margin-right:1.3889vw;}
+  .product_info_odd .product_info_slide_wrap .slick-next { right:-0.9667vw; width:1.1806vw; height:2.8472vw; }
+  .product_info_even { justify-content: center;}
+  .product_info_even .product_info_slide_wrap { width:50.0000vw; padding-right:1.1111vw;}
+  .product_info_even .product_info_pricelist { width:50.0000vw;}
+  .product_info_even .product_info_pricelist_box { width:23.6111vw !important; height:41.6667vw; margin-left:1.3889vw;}
+  .product_info_even .product_info_slide_wrap .slick-prev { left:-1.7639vw; width:1.2500vw; height:2.9167vw; }
+
+  /* 메인 kv */
+  .kv_visual_wrap .kv_visual_image img { width:100.0000vw;}
+  .kv_visual .kv_visual_text { top:2.9167vw; left:3.0556vw;}
+  .kv_visual .kv_visual_text h1 { font-size:3.3333vw; margin-bottom:1.3889vw;}
+  .kv_visual .kv_visual_text p { font-size:1.1111vw;}
+  .kv_visual_promotion { padding:2.0833vw; }
+  .kv_visual_promotion .kv_visual_left { width:28.1250vw; }
+  .kv_visual_promotion .kv_visual_left h2 { font-size:2.7778vw; margin-bottom:0.6944vw;}
+  .kv_visual_promotion .kv_visual_left p { font-size:1.2500vw; }
+  .kv_visual_promotion .kv_visual_right { width:71.8750vw;}
+  .kv_visual_promotion .kv_visual_right li { width:23.9583vw;  }
+  .kv_visual_promotion .kv_visual_right li:nth-child(1) img { width:5.8333vw;}
+  .kv_visual_promotion .kv_visual_right li:nth-child(2) img { width:5.4167vw;}
+  .kv_visual_promotion .kv_visual_right li:nth-child(3) img { width:4.2361vw;}
+  .kv_visual_right_texts { margin:0 0 0 2.5000vw;  }
+  .kv_visual_right_texts h3 { font-size:1.8056vw; font-weight:700; margin:0 0 0.8333vw;}
+  .kv_visual_right_texts p { font-size:1.1111vw; letter-spacing: -0.0278vw;}
+
+  /* Pet lovers with allergies? */
+  #product_info_01 .product_info_pricelist_box:nth-child(2n-1) .product_info_slide_head_area { padding-bottom:4.4444vw;}
+  #product_info_01 .product_info_text_area { top:30.6944vw;}
+  #product_info_01 .hover_content .hover_img > img { width:5.6250vw;}
+  #product_info_01 .product_info_pricelist_box:nth-child(2n-1) .product_info_img_area img { width:5.2083vw;}
+  #product_info_01 .product_info_pricelist_box:nth-child(2n) .product_info_img_area img { width:6.5278vw;}
+  #product_info_02 { padding:4.1667vw 0 6.2500vw;}
+  #product_info_02 .product_info_slide_head_area { padding-bottom:3.4722vw;}
+  #product_info_02 .hover_content .hover_img > img { width:5.9028vw;}
+  #product_info_02 .product_info_pricelist_box .product_info_img_area img { width:8.0556vw;}
+
+  /* Allergic to spring pollen? */
+  #title_area_02.title_area { padding:0 0 2.7778vw;}
+  #product_info_03 .product_info_slide_head_area { padding-bottom:4.4444vw;}
+  #product_info_03 .product_info_pricelist_box:nth-child(2n-1) .product_info_slide_head_area { padding-bottom:3.1944vw;}
+  #product_info_03 .product_info_pricelist_box:nth-child(2n-1) .product_info_slide_head_area h3:after {  width:5.6250vw; height:1.3889vw;  top:5.1611vw; }
+  #product_info_03 .hover_content .hover_img > img { width:5.8333vw;}
+  #product_info_03 .product_info_pricelist_box:nth-child(2n-1) .product_info_img_area img { width:7.0139vw;}
+  #product_info_03 .product_info_pricelist_box:nth-child(2n) .product_info_img_area img { width:6.9444vw;}
+  #product_info_04 { padding:4.1667vw 0 3.4722vw;}
+  #product_info_04 .product_info_slide_head_area { padding-bottom:3.6111vw;}
+  #product_info_04 .hover_content .hover_img > img { width:5.2083vw;}
+  #product_info_04 .product_info_pricelist_box .product_info_img_area img { width:2.5694vw;}
+
+  /* disclaimer */
+  .under_disclaimer span { font-size:0.9722vw; margin-right:0.4167vw;}
+  .under_disclaimer li { margin-bottom:0.9722vw;}
+  .under_disclaimer li p { font-size:0.9722vw; letter-spacing: -0.0139vw;}
+
+  /* floating menu */
+  .floating_btn { display:none !important;}
+}
+
+@media screen and (max-width:768px) { 
+
+  /* common */
+  .product_info { padding:10.5556vw 6.6667vw 8.3333vw;}
+  .product_info .title_area { padding:0 0 6.9444vw;}
+  .product_info .title_area h2 { font-size:6.9444vw; margin-bottom: 1.3889vw;}
+  .product_info .title_area p { font-size:3.6111vw;}
+  .product_info .product_info_frame_wrap { width:86.6667vw; height:55.5556vw; border-radius:3.4722vw; margin-bottom:5.5556vw;}
+  .product_info .product_info_frame_wrap .product_info_frame_imgbox a img { width:86.6667vw;}
+  .product_info_text_area { color:#fff; position:absolute; top:34.1667vw; left:6.6667vw; opacity:1; transform: translate3d(0,0,0); transition: all 0.45s ease-out;}
+  .product_info_text_area h2 { font-size:6.9444vw;}
+  .product_info_text_area p { font-size:3.6111vw;}
+  .product_info .product_info_hover_wrap { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); transform:translate(0,100%); transition:all 0.35s;}
+  .product_info .hover_content { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:100%; text-align: center;} 
+  .product_info .hover_content .hover_img { margin-bottom:5.0000vw;}
+  .product_info .hover_content .hover_txt h3 { font-size:4.1667vw; color:#fff; margin-bottom:5.0000vw;}
+  .product_info .hover_content .hover_txt p { font-size:3.6111vw; color:#fff;}
+  .product_info .product_info_frame_wrap:hover .product_info_text_area { opacity:0; transform: translate3d(0,4.1667vw,0);}
+  .product_info .product_info_frame_wrap:hover .product_info_hover_wrap { opacity:1; transform:translate(0,0);}
+  .product_info .product_info_pricelist_box_mo { margin:0 2.0833vw;}
+  .product_info .product_info_pricelist_box_mo .product_info_img_area_mo { background:#fff; border-radius:3.4722vw; padding:10.6944vw 0; position:relative;}
+  .product_info .product_info_pricelist_box_mo .product_info_img_area_mo.best_txt:before { content:''; display:block; width:16.6667vw; height:4.1667vw;  border-radius:2.0833vw; background:url(../img/product_info_best_seller_txt_mo.png) no-repeat; background-size:cover; position:absolute; top:2.7778vw; left:2.7778vw;}
+  .product_info .product_info_pricelist_box_mo .product_info_img_area_mo img { margin:0 auto;}
+  .product_info .product_info_pricelist_box_mo .product_info_price_area_mo { text-align: center;}
+  .product_info .product_info_pricelist_box_mo .product_info_price_area_mo h3 { font-size:3.6111vw; font-family:"SamsungOneKorean",arial, sans-serif; margin:4.8611vw 0 0; letter-spacing: -0.1389vw;}
+  .product_info .product_info_pricelist_box_mo .product_info_price_area_mo h4 { font-size:4.4444vw; padding:5.5556vw 0 0;}
+  .product_info .product_info_pricelist_box_mo .product_info_price_area_mo .price_discount_mo { display:flex; justify-content: center; align-items:center; padding-top:2.2222vw;}
+  .product_info .product_info_pricelist_box_mo .product_info_price_area_mo .price_discount_mo del { font-size: 3.0556vw; font-weight:600; margin-right:1.8056vw;}
+  .product_info .product_info_pricelist_box_mo .product_info_price_area_mo .price_discount_mo h5 { font-size:3.3333vw; color:#0a72eb;}
+  .product_info .product_info_pricelist_box_mo .product_info_price_area_mo .star_area_mo { display:flex; justify-content: center; align-items:center; padding: 3.0556vw 0 4.1667vw;}
+  .product_info .product_info_pricelist_box_mo .product_info_price_area_mo .star_area_mo li { margin-right:1.9444vw;}
+  .product_info .product_info_pricelist_box_mo .product_info_price_area_mo .star_area_mo li img { width:20.2778vw;}
+  .product_info .product_info_pricelist_box_mo .product_info_price_area_mo .star_area_mo p { font-size:3.0556vw; font-weight:600;}
+  .product_info .product_info_pricelist_box_mo .product_info_button_mo { text-align: center;}
+  .product_info .product_info_pricelist_box_mo .product_info_button_mo a { font-family: "SamsungOneKorean",arial, sans-serif; display:inline-block; background:#000; width:35.4167vw; height:10.9722vw; line-height:10.9722vw; border-radius:5.4861vw; color: #fff; font-size:3.8889vw;}
+
+  /* slick */
+  .product_info_wrap { display:block;}
+  .product_info_slide_wrap_mo .slick-dots { text-align: center; margin-top:4.8611vw;}
+  .product_info_slide_wrap_mo .slick-dots li { display:inline-block; font-size:0; width:2.3611vw; height:2.3611vw; border-radius:100%; border:0.1389vw solid #000; margin-right:2.0833vw; cursor:pointer;}
+  .product_info_slide_wrap_mo .slick-dots li button { font-size:0;}
+  .product_info_slide_wrap_mo .slick-dots li.slick-active { background:#000;}
+
+  /* 메인 kv */
+  .kv_visual_wrap { text-align: center;}
+  .kv_visual_wrap .kv_visual_image img { width:100vw;}
+  .kv_visual .kv_visual_text { top:5.8333vw; left:0; width:100%; text-align: center;}
+  .kv_visual .kv_visual_text h1 { font-size:7.2222vw; margin-bottom:3.3333vw;}
+  .kv_visual .kv_visual_text p { font-size:3.3333vw;}
+  .kv_visual_promotion { display:block; padding:10.1389vw 6.6667vw 11.8056vw;}
+  .kv_visual_promotion .kv_visual_left { width:100%; text-align: center; margin-bottom: 7.2222vw;}
+  .kv_visual_promotion .kv_visual_left h2 { font-size:6.9444vw; font-weight:800; line-height:1.2; margin-bottom:3.6111vw;}
+  .kv_visual_promotion .kv_visual_left p { font-size:3.6111vw; }
+  .kv_visual_promotion .kv_visual_right { width:100%; justify-content: center; align-items: center;}
+  .kv_visual_promotion .kv_visual_right li { width:33%; display:block;}
+  .kv_visual_promotion .kv_visual_right li img { margin:0 auto;}
+  .kv_visual_promotion .kv_visual_right li:nth-child(1) img { width:13.3333vw;}
+  .kv_visual_promotion .kv_visual_right li:nth-child(2) img { width:12.3611vw;}
+  .kv_visual_promotion .kv_visual_right li:nth-child(3) img { width:10.0000vw;}
+  .kv_visual_right_texts { margin:0; text-align: center;}
+  .kv_visual_right_texts h3 { font-size:3.6111vw; margin:3.3333vw 0 2.5000vw;}
+  .kv_visual_promotion .kv_visual_right li:nth-child(1) .kv_visual_right_texts h3 { margin-top:5.5556vw;}
+  .kv_visual_right_texts p { font-size:3.0556vw; letter-spacing: -0.0556vw;}
+
+  /* Pet lovers with allergies? */
+  #product_info_01 .product_info_pricelist_box:nth-child(2n-1) .product_info_slide_head_area { padding-bottom:8.8889vw;}
+  #product_info_01 .hover_content .hover_img > img { width:15.0000vw;}
+  #product_info_01 .product_info_text_area { top: 33.3333vw;}
+  #product_info_01 .product_info_pricelist_box_mo:nth-child(2n-1) .product_info_price_area_mo h4 { padding:10.2778vw 0 0;}
+  #product_info_01 .product_info_pricelist_box_mo:nth-child(2n-1) .product_info_img_area_mo img { width:11.3889vw;}
+  #product_info_01 .product_info_pricelist_box_mo:nth-child(2n) .product_info_img_area_mo img { width:14.0278vw;}
+  #product_info_02 { padding:11.1111vw 0 11.1111vw;}
+  #product_info_02 .hover_content .hover_img > img { width:17.9167vw;}
+  #product_info_02 .product_info_slide_head_area { padding-bottom:6.9444vw;}
+  #product_info_02 .product_info_pricelist_box_mo:nth-child(2n-1) .product_info_img_area_mo img { width:18.7500vw;}
+  #product_info_02 .product_info_pricelist_box_mo:nth-child(2n) .product_info_img_area_mo img { width:18.4722vw;}
+  
+  /* Allergic to spring pollen? */
+  #product_info_03 .hover_content .hover_img > img { width:16.8056vw;}
+  #product_info_03 .product_info_pricelist_box_mo:nth-child(2n-1) .product_info_img_area_mo img { width:19.0278vw;}
+  #product_info_03 .product_info_pricelist_box_mo:nth-child(2n) .product_info_img_area_mo img { width:18.8889vw;}
+  #product_info_04 { padding:11.1111vw 0 11.1111vw;}
+  #product_info_04 .product_info_text_area { top:37.5000vw;}
+  #product_info_04 .hover_content .hover_img > img { width:13.8889vw;}
+  #product_info_04 .product_info_pricelist_box_mo .product_info_price_area_mo h3 { letter-spacing: -0.2389vw;}
+  #product_info_04 .product_info_pricelist_box_mo:nth-child(2n-1) .product_info_img_area_mo img { width:6.3889vw;}
+  #product_info_04 .product_info_pricelist_box_mo:nth-child(2n) .product_info_img_area_mo img { width:6.1111vw;}
+
+  /* disclaimer */
+  .under_disclaimer li { margin-bottom:2.7778vw;}
+  .under_disclaimer li p { font-size:3.0556vw; letter-spacing:-0.0994vw;}
+  .under_disclaimer span { width:1.3889vw; font-size:3.0556vw; margin-right:0.8333vw;}
+}
